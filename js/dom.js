@@ -33,7 +33,7 @@ buttonEl.addEventListener("click", () => {
 
 // setAttributes, getAttributes, removeAttributes
 
-const sectionEl = document.getElementsByTagName("section");
-sectionEl[0].setAttribute("class", "container");
-console.log(sectionEl[0].getAttribute("class"));
-sectionEl[0].removeAttribute("id");
+const sectionEl = document.querySelector("section");
+sectionEl.setAttribute("class", "container");
+console.log(sectionEl.getAttribute("class"));
+sectionEl.removeAttribute("id");
