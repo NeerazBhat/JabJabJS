@@ -35,5 +35,26 @@ buttonEl.addEventListener("click", () => {
 
 const sectionEl = document.querySelector("section");
 sectionEl.setAttribute("class", "container");
-console.log(sectionEl.getAttribute("class"));
+// console.log(sectionEl.getAttribute("class"));
 sectionEl.removeAttribute("id");
+
+/* children vs childNodes */
+// console.log(ulEl.children); // All tags
+// console.log(ulEl.childNodes); // All tags including white space
+// console.log(ulEl.firstChild); // select white space
+// console.log(ulEl.firstElementChild); // select first child element
+
+/* parentNode vs parentElement */
+// console.log(ulEl.firstElementChild.parentElement);
+// console.log(ulEl.firstElementChild.parentNode);
+
+/* Siblings */
+const firstList = ulEl.firstElementChild;
+// console.log(firstList.nextSibling) // select white space
+// console.log(firstList.nextElementSibling) // select element
+
+// console.log(firstList.previousSibling) // white space
+// console.log(firstList.previousElementSibling) // null
+
+const listLink = firstList.nextElementSibling.firstElementChild;
+console.log(listLink.textContent)
