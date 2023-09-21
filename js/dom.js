@@ -19,7 +19,7 @@ for (let list of listEl) {
 
 const listClass = document.getElementsByClassName("list");
 // const listClass = document.getElementsByTagName('li');
-console.log(listClass);
+// console.log(listClass);
 
 // The QuerySelectorAll can select combination of classes, but it return static collection of node
 // getElementsByClassName can select one class name but it return HTMLcollection which is a live collection of elements
@@ -30,3 +30,10 @@ buttonEl.addEventListener("click", () => {
   newEl.classList.toggle("styled");
   newEl.textContent = "This is changed now";
 });
+
+// setAttributes, getAttributes, removeAttributes
+
+const sectionEl = document.getElementsByTagName("section");
+sectionEl[0].setAttribute("class", "container");
+console.log(sectionEl[0].getAttribute("class"));
+sectionEl[0].removeAttribute("id");
